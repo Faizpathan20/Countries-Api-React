@@ -1,0 +1,240 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body{
+    --background-color: white;
+    --text-color:black;
+    --element-color: white;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+}
+
+body.dark{
+    --background-color: hsl(207, 26%, 17%);
+    --text-color:white;
+    --element-color: hsl(209, 23%, 22%);
+}
+main{
+    padding: 24px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.title{
+    font-weight: 800;
+}
+
+.header-container{
+    box-shadow: 0 2px 4px 0px rgba(0, 0, 0, 0.1);
+    padding-inline: 24px;
+    background-color: var(--element-color);
+
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+.countries-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    display: flex;
+    gap: 64px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.country-card{
+    display: inline-block;
+    width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0px 8px 0px rgba(0, 0, 0, 0.2);
+    padding-bottom: 24px;
+    margin-top: 16px;
+    transition: all  0.2s ease-in-out;
+    background-color: var(--element-color);
+}
+.country-card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.2);
+
+}
+.country-card img{
+    width: 100%;
+}
+.card-text{
+    padding-inline: 16px;
+}
+.card-title{
+    font-size: 24px;
+    margin-block: 16px;
+}
+.card-text p{
+    margin-block: 8px;
+}
+.search-filter-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-container{
+    box-shadow: 0 0px 12px 0px rgba(0, 0, 0, 0.2);
+    max-width: 350px;
+    border-radius: 4px;
+    padding-left:24px;    /* width: 400px; */
+    color: grey;
+    overflow: hidden;
+    background-color: var(--element-color);
+    color: var(--text-color);
+}
+.search-container input{
+    border:none;
+    padding: 16px;
+    outline: none;
+    width: 80%;
+    background-color: inherit;
+    color: inherit;
+
+}
+
+.filter-by-region{
+    width: 200px;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0px 12px 0px rgba(0, 0, 0, 0.2);
+     background-color: var(--element-color);
+    color: var(--text-color);
+    
+}
+.theme{
+    cursor: pointer;
+    user-select: none;
+}
+
+@media(max-width:768px){
+    .countries-container{
+        justify-content: center;
+    }
+    .title{
+        font-size: 16px;
+    }
+
+    .header-content p{
+        font-size: 12px;
+    }
+    .search-filter-container{
+        flex-direction: column;
+         gap: 16px;
+        align-items: center;
+    }
+}
+.back-button{
+    padding: 6px 24px;
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+.country-details-container{
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 24px;
+    margin-top: 32px;
+}
+
+
+.country-details{
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-top: 20px;
+
+}
+.country-details img{
+    width: 50%;
+    border: 1px solid #ddd;
+
+}
+.details-text{
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;   
+    column-gap: 64px;   
+    max-height: 180px;
+    flex-wrap: wrap;
+
+
+}
+.details-text p{
+    margin: 0;
+}
+.border-country{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    flex-wrap: wrap;
+    
+}
+.border-country a{
+    padding: 4px 16px;
+    box-shadow: 0 0px 4px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    font-size: 14px;
+
+}
+
+.border-countries{
+    margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+}
+
+
+
+
+@media (max-width: 840px){
+    .country-details{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 32px;
+        gap: 24px;
+    }
+    .details-text{
+        max-height: unset;
+
+    }
+   .country-details img{
+    width: 100%;
+    max-width: 500px;
+
+}
+
+
+.title{
+    font-size: 16px;
+
+}
+.header-container p{
+    font-size: 12px;
+
+}
+
+}
